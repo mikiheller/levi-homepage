@@ -17,6 +17,7 @@ body {
 header {
     text-align: center;
     padding: 40px 20px 30px;
+    position: relative;
 }
 
 h1 {
@@ -148,6 +149,53 @@ main {
     font-size: 1rem;
     color: #4a7c59;
     font-weight: 400;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(-5px);
+}
+
+/* Games Grid */
+.games-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .back-button {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Footer */
