@@ -4,9 +4,19 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
 body {
     font-family: 'Fredoka', sans-serif;
-    min-height: 100vh;
+    height: 100%;
+    overflow: auto;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: auto;
     background: linear-gradient(135deg, #1a472a 0%, #2d5a3f 30%, #1e3a2a 70%, #0f2318 100%);
     color: white;
     display: flex;
